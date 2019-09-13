@@ -1,4 +1,9 @@
 import React from "react";
+import Passo1 from "./passo1";
+import Passo2 from "./passo2";
+import Passo3 from "./passo3";
+import Passo4 from "./passo4";
+import Passo5 from "./passo5";
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -29,7 +34,7 @@ export default class Home extends React.Component {
     
     _next = () => {
       let currentStep = this.state.currentStep
-      currentStep = currentStep >= 2? 3: currentStep + 1
+      currentStep = currentStep >= 4? 5: currentStep + 1      
       this.setState({
         currentStep: currentStep
       })
@@ -62,7 +67,7 @@ export default class Home extends React.Component {
   
   nextButton(){
     let currentStep = this.state.currentStep;
-    if(currentStep <3){
+    if(currentStep <5){
       return (
         <button 
           className="btn btn-primary float-right" 
@@ -76,7 +81,7 @@ export default class Home extends React.Component {
     
     render() {    
       return (
-          <>
+        <>
         <React.Fragment>
         <h1>Monte seu VW</h1>
         <p>Passo: {this.state.currentStep} </p> 
@@ -85,17 +90,27 @@ export default class Home extends React.Component {
         {/* 
           render the form steps and pass required props in
         */}
-          <Step1 
+          <Passo1 
             currentStep={this.state.currentStep} 
             handleChange={this.handleChange}
             email={this.state.email}
           />
-          <Step2 
+          <Passo2 
             currentStep={this.state.currentStep} 
             handleChange={this.handleChange}
             username={this.state.username}
           />
-          <Step3 
+          <Passo3 
+            currentStep={this.state.currentStep} 
+            handleChange={this.handleChange}
+            password={this.state.password}
+          />
+          <Passo4 
+            currentStep={this.state.currentStep} 
+            handleChange={this.handleChange}
+            password={this.state.password}
+          />
+          <Passo5 
             currentStep={this.state.currentStep} 
             handleChange={this.handleChange}
             password={this.state.password}
@@ -113,68 +128,4 @@ export default class Home extends React.Component {
         </>       
       );
     }
-  }
-  
-  function Step1(props) {
-    if (props.currentStep !== 1) {
-      return null
-    } 
-    return(
-      <div className="form-group">
-        <label htmlFor="email">Email address</label>
-        <input
-          className="form-control"
-          id="email"
-          name="email"
-          type="text"
-          placeholder="Enter email"
-          value={props.email}
-          onChange={props.handleChange}
-          />
-      </div>
-    );
-  }
-  
-  function Step2(props) {
-    if (props.currentStep !== 2) {
-      return null
-    } 
-    return(
-      <div className="form-group">
-        <label htmlFor="username">Username</label>
-        <input
-          className="form-control"
-          id="username"
-          name="username"
-          type="text"
-          placeholder="Enter username"
-          value={props.username}
-          onChange={props.handleChange}
-          />
-      </div>
-    );
-  }
-  
-  function Step3(props) {
-    if (props.currentStep !== 3) {
-      return null
-    } 
-    return(
-      <React.Fragment>
-      <div className="form-group">
-        <label htmlFor="password">Password</label>
-        <input
-          className="form-control"
-          id="password"
-          name="password"
-          type="password"
-          placeholder="Enter password"
-          value={props.password}
-          onChange={props.handleChange}
-          />      
-      </div>
-      <button className="btn btn-success btn-block">Finalizar</button>
-      </React.Fragment>
-          
-    );
   }
