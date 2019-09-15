@@ -1,13 +1,21 @@
 import React from 'react';
-import Home from "./components/home";
 import { ApplicationRoutes } from "./ApplicationRoutes";
+import { connect } from 'react-redux';
+import { Provider } from 'react-redux';
+import { Store } from './store';
 
-function App() {
+class App extends React.Component {
+  render(){
   return (
+    <Provider store={Store}>
     <div>
-    <ApplicationRoutes />
+      <ApplicationRoutes />
     </div>
+    </Provider>
   );
+  }
 }
-
-export default App;
+const mapStateToProps = store => ({
+  carro: store.carro
+});
+export default connect(mapStateToProps)(App);

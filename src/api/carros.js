@@ -13,7 +13,7 @@ export class Carros {
 
   static getCarrobyId(id) {
     return new Promise((resolve, reject) => {
-      const carro = carros.modelos.find(c => c.id === parseInt(id));
+      const carro = carros.find(c => c.id === parseInt(id));
       if (carro) {
         resolve(carro);
       } else {
