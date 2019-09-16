@@ -4,134 +4,356 @@
         "id": 1,
         "nome": "Up!",
         "imagem": "up.jpg",
-        "versoes":[1,2]
+        "versoes": [
+          {
+              "id": 1,
+              "nome": "1.0 TSI",
+              "preco": 55.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                },
+                {
+                    "id": 4,
+                    "nome": "Vermelho",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+              {
+                  "id": 2,
+                  "nome": "Central Multimidia",
+                  "preco": 2.000
+                }            
+            ]  
+           },
+          {
+              "id": 2,
+              "nome": "1.0 Move",
+              "preco": 50.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+              {
+                "id": 1,
+                "nome": "Roda de Liga",
+                "preco": 5.000  
+              },
+              {
+                  "id": 2,
+                  "nome": "Central Multimidia",
+                  "preco": 2.000
+                }            
+            ]  
+               
+          }
+       ]      
        },
       {
         "id": 2,
         "nome": "Polo",
         "imagem": "polo.jpg",
-        "versoes":[1,3]        
+        "versoes": [
+          {
+              "id": 1,
+              "nome": "1.0 TSI",
+              "preco": 60.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+              {
+                  "id": 2,
+                  "nome": "Central Multimidia",
+                  "preco": 2.000
+                }            
+            ]  
+            },
+          {
+              "id": 3,
+              "nome": "1.6 MSI",
+              "preco": 55.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+              {
+                "id": 1,
+                "nome": "Roda de Liga",
+                "preco": 5.000  
+              },
+              {
+                  "id": 2,
+                  "nome": "Central Multimidia",
+                  "preco": 2.000
+                }            
+            ]  
+          }
+       ]        
        },
       {
         "id": 3,
         "nome": "Golf",
         "imagem": "golf.jpg",
-        "versoes":[1,3,4,5]        
+        "versoes": [
+          {
+              "id": 1,
+              "nome": "1.0 TSI",
+              "preco": 75.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                },
+                {
+                    "id": 4,
+                    "nome": "Vermelho",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+                {
+                  "id": 3,
+                  "nome": "Teto Solar",
+                  "preco": 5.000
+                }            
+            ]  
+          },
+          {
+              "id": 3,
+              "nome": "1.6 MSI",
+              "preco": 60.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+                 {
+                  "id": 3,
+                  "nome": "Teto Solar",
+                  "preco": 5.000
+                }            
+            ]  
+          },
+          {
+              "id": 4,
+              "nome": "1.4 TSI",
+              "preco": 80.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+                {
+                  "id": 3,
+                  "nome": "Teto Solar",
+                  "preco": 5.000
+                }
+            ]  
+                
+          },
+          {
+              "id": 5,
+              "nome": "GTI",
+              "preco": 155.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                },
+                {
+                    "id": 4,
+                    "nome": "Vermelho",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+                {
+                  "id": 3,
+                  "nome": "Teto Solar",
+                  "preco": 5.000
+                },
+                {
+                  "id": 4,
+                  "nome": "Pacote Sport",
+                  "preco": 15.000
+                }            
+            ]  
+               
+          }
+       ]       
        },
       {
         "id": 4,
         "nome": "Jetta",
         "imagem": "jetta.jpg",
-        "versoes":[4,6]        
+        "versoes": [
+          {
+              "id": 6,
+              "nome": "GLI",
+              "preco": 165.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                },
+                {
+                    "id": 3,
+                    "nome": "Prata",
+                    "preco": 2.000
+                }
+            ],
+            "opcionais": [
+                {
+                  "id": 5,
+                  "nome": "Pacote R-line",
+                  "preco": 15.000
+                }
+            
+            ]  
+          }
+       ]       
        },
       {
         "id": 5,
         "nome": "Passat",
         "imagem": "passat.jpg",
-        "versoes":[7]        
+        "versoes": [
+          {
+              "id": 7,
+              "nome": "HighLine",
+              "preco": 195.000,
+              "cores": [
+                {
+                    "id": 1,
+                    "nome": "Branco",
+                    "preco": 0        
+                },
+                {
+                    "id": 2,
+                    "nome": "Preto",
+                    "preco": 0        
+                }
+            ],
+            "opcionais": [
+                {
+                  "id": 5,
+                  "nome": "Pacote R-line",
+                  "preco": 15.000
+                }
+            
+            ]  
+                    }	
+       ]       
        }	   
-	   
- ],
-  "versoes": [
-    {
-        "id": 1,
-        "nome": "1.0 TSI",
-        "preco": 60.000,
-        "cores": [1,2,3,4],
-        "opcionais": [1,2]
-    },
-    {
-        "id": 2,
-        "nome": "1.0 Move",
-        "preco": 50.000,
-        "cores": [1,2,3],
-        "opcionais": [1,2]        
-    },
-    {
-        "id": 3,
-        "nome": "1.6 MSI",
-        "preco": 55.000,
-        "cores": [1,2],
-        "opcionais": [1,2]        
-    },
-    {
-        "id": 4,
-        "nome": "1.4 TSI",
-        "preco": 155.000,
-        "cores": [1,2,3],
-        "opcionais": [1,2,3]        
-    },
-    {
-        "id": 5,
-        "nome": "GTI",
-        "preco": 155.000,
-        "cores": [1,2,3,4],
-        "opcionais": [3,4]        
-    },
-    {
-        "id": 6,
-        "nome": "GLI",
-        "preco": 165.000,
-        "cores": [1,2,3],
-        "opcionais": [3,5]        
-    },
-    {
-        "id": 7,
-        "nome": "HighLine",
-        "preco": 195.000,
-        "cores": [1,2,3],
-        "opcionais": [3]        
-    }	
-	
- ],
- "cores": [
-    {
-        "id": 1,
-        "nome": "Branco",
-        "preco": 0        
-    },
-    {
-        "id": 2,
-        "nome": "Preto",
-        "preco": 0        
-    },
-    {
-        "id": 3,
-        "nome": "Prata",
-        "preco": 2.000
-    },
-    {
-        "id": 4,
-        "nome": "Vermelho",
-        "preco": 2.000
-    }
-],
-  "opcionais": [
-    {
-      "id": 1,
-      "nome": "Roda de Liga",
-      "preco": 5.000  
-    },
-    {
-        "id": 2,
-        "nome": "Central Multimidia",
-        "preco": 2.000
-      },
-      {
-        "id": 3,
-        "nome": "Teto Solar",
-        "preco": 5.000
-      },
-      {
-        "id": 4,
-        "nome": "Pacote Sport",
-        "preco": 15.000
-      },
-      {
-        "id": 5,
-        "nome": "Pacote R-line",
-        "preco": 15.000
-      }
-  
-  ]  
-  }
+ ]
+}

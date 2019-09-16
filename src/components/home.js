@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Carros } from "../api/carros"
+import { Carros } from "../api/carros";
 import Passo1 from "./passo1";
 import Passo2 from "./passo2";
 import Passo3 from "./passo3";
@@ -86,7 +86,6 @@ export default function Home(props) {
           <Passo2 
             currentStep={currentStep} 
             handleChange={handleChange}
-            carros={carros}
           />
           <Passo3 
             currentStep={currentStep} 
