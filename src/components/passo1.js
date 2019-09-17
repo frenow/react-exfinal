@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
-import { addCarro } from '../actions'; 
-import { ADD_CARRO } from '../actions/actionTypes';
+import { addModelo } from '../actions'; 
+import { ADD_MODELO } from '../actions/actionTypes';
 
 function Passo1(props) {
   const [carros, setCarros] = useState(props.carros);
@@ -12,11 +12,10 @@ function Passo1(props) {
     setCurrentStep(props.currentStep);    
   }, [props]);  
 
-  function addCarro(car) {
-    
-    console.log('add carro '+car.nome);    
-    props.addCarro(car);
-    return { type: ADD_CARRO, car }
+function addModelo(modelo) {    
+  console.log('add modelo '+modelo.nome); 
+  props.addModelo(modelo);
+  return { type: ADD_MODELO, modelo }
 }  
 
     if (currentStep !== 1) {
@@ -29,7 +28,7 @@ function Passo1(props) {
         <ul>        
           {carros.map(car => <div className='row'><a className='card'><li key={car.id}>
           <h2>{car.id} - {car.nome}</h2>
-          <button onClick={() => addCarro(car)}>Escolher</button>
+          <button onClick={() => addModelo(car)}>Escolher</button>
           <img src={require(`../assets/images/${car.imagem}`)} alt="Carro" />	
           </li></a></div>)}
         
@@ -64,13 +63,12 @@ function Passo1(props) {
     );
   }
   const mapStateToProps = store => ({
-    carro: store.carro
+    modelo: store.modelo
   });
    
  const mapDispatchToProps= (dispatch)=>{
-    
     return{
-        addCarro: (carro)=>{dispatch(addCarro(carro))}
+        addModelo: (modelo)=>{dispatch(addModelo(modelo))}
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Passo1);

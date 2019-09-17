@@ -9,10 +9,12 @@ import Passo5 from "./passo5";
 export default function Home(props) {
  
   const [carros, setCarros] = useState([]);
+  const [modelo, setModelo] = useState([]);
   const [currentStep, setCurrentSpep] = useState(1);
 
   useEffect(() => {
     Carros.getCarros().then( (car) => setCarros(car.modelos));    
+    setModelo(carros);
   }, []);  
 
 

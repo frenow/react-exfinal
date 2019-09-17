@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
-import { addCarro } from '../actions';
-import { ADD_CARRO } from '../actions/actionTypes';
+import { addModelo, addVersao } from '../actions';
+import { ADD_MODELO, ADD_VERSAO } from '../actions/actionTypes';
 
 function Passo2(props) {
-  const [carro, setCarro] = useState(props.carro);
+  const [modelo, setModelo] = useState(props.modelo);
   const [versao, setVersao] = useState([]);
   const [currentStep, setCurrentStep] = useState(props.currentStep);
 
   useEffect(() => {
-    console.log(props.carro);
-    setCarro(props.carro);
+    console.log(props.modelo);
+    setModelo(props.modelo);
+    setVersao(props.versao);
     setCurrentStep(props.currentStep);    
   }, [props]);  
 
-  function addCarro(car, ver) {
-    
+  function addVersao(ver) {    
     console.log('add versao '+ver.nome);  
-    setVersao(ver);  
-    props.addCarro(car);
-    return { type: ADD_CARRO, car }
+    props.addVersao(ver);
+    return { type: ADD_VERSAO, ver }
 }  
 
     if (props.currentStep !== 2) {
@@ -30,10 +29,10 @@ function Passo2(props) {
       <h2>Escolha a versão - Passo {props.currentStep}</h2>
       <div>
       <ul>   
-        {carro.map(car => 
-          <li key={car.id}>{car.id} - {car.nome}
+        {modelo.map(mod => 
+          <li key={mod.id}>{mod.id} - {mod.nome}
           <ul>
-            {car.versoes.map(ver => <li key={ver.id}> {ver.id} - {ver.nome} Preço: {ver.preco} <button onClick={() => addCarro(car, ver)}>Escolher</button></li>)}
+            {mod.versoes.map(ver => <li key={ver.id}> {ver.id} - {ver.nome} Preço: {ver.preco} <button onClick={() => addVersao(ver)}>Escolher</button></li>)}
           </ul>
           </li>)}
       </ul>
@@ -42,13 +41,14 @@ function Passo2(props) {
     );
   }
   const mapStateToProps = store => ({
-    carro: store.carro
+    modelo: store.modelo,
+    versao: store.versao
   });
    
- const mapDispatchToProps= (dispatch)=>{
-    
+ const mapDispatchToProps= (dispatch)=>{    
     return{
-        addCarro: (carro)=>{dispatch(addCarro(carro))}
+      addModelo: (modelo)=>{dispatch(addModelo(modelo))},
+      addVersao: (versao)=>{dispatch(addVersao(versao))},
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Passo2);
