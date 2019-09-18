@@ -47,11 +47,12 @@ export default function Home(props) {
     let current = currentStep;
     if(current !==1){
       return (
+        <div className='centralizado'>
         <button 
-          className="btn btn-secondary" 
           type="button" onClick={_prev}>
         Anterior
         </button>
+        </div>
       )
     }
     return null;
@@ -61,11 +62,12 @@ export default function Home(props) {
     let current = currentStep;
     if(current <5){
       return (
+        <div className='centralizado'>
         <button 
-          className="btn btn-primary float-right" 
           type="button" onClick={_next}>
         Próximo
         </button>        
+        </div>
       )
     }
     return null;
@@ -109,6 +111,9 @@ export default function Home(props) {
         <style jsx>{`
         body {
             margin: 1em;
+        }
+        .centralizado { 
+          text-align: center; 
         }
         `}</style>           
         </>       

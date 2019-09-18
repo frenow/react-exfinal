@@ -40,18 +40,18 @@ function Passo5(props) {
       <div>
       <ul>   
         {modelo.map(mod => 
-          <li key={mod.id}>
-          {mod.id} - {mod.nome}
+          <li key={mod.id}><h2>{mod.id} - {mod.nome}</h2>
           <img src={require(`../assets/images/${mod.imagem}`)} alt="Carro" />
           <ul>
             {versao.map(ver => 
-            <li key={ver.id}> {ver.id} - {ver.nome} 
+            <li key={ver.id}><h3>{ver.id} - {ver.nome}</h3>
             <ul>
               {cor.map(cor => 
-                <li key={cor.id}> {cor.id} - {cor.nome}
+                <li key={cor.id}><h4>{cor.id} - {cor.nome}</h4>
                 <ul>
                   {opcional.map(op => 
-                    <li key={op.id}>{op.id} - {op.nome} </li>)}
+                    <li key={op.id}><h5>{op.id} - {op.nome}</h5>
+                    </li>)}
                 </ul>
                 </li>
                 )}
@@ -61,8 +61,41 @@ function Passo5(props) {
           </li>)}
       </ul>
       </div>
+      <div className='centralizado'>
       <button onClick={() => buyClick()}>Comprar</button>
-      <br></br>      
+      <br></br>  
+      </div>
+      <style jsx>{`
+      ul {
+          text-align: center;
+          list-style:none;
+      }
+      .selecionado {
+        background-color: #067df7;
+      }
+      h1 { text-align: center; }
+      .row {
+        max-width: 220px;
+        margin: 40px auto 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .card {
+        padding: 18px 18px 24px;
+        width: 640px;
+        text-align: left;
+        text-decoration: none;
+        color: #434343;
+        border: 1px solid #9b9b9b;
+      }
+      .card:hover {
+        border-color: #067df7;
+      }
+      .centralizado { 
+        text-align: center; 
+      }      
+    `}</style>
       </>
     );
   }

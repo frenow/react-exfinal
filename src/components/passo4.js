@@ -10,6 +10,7 @@ function Passo4(props) {
   const [cor, setCor] = useState([props.cor]);
   const [opcional, setOpcional] = useState([]);
   const [currentStep, setCurrentStep] = useState(props.currentStep);
+  const [selecionado, setSelecionado] = useState(null);
 
   useEffect(() => {
     console.log(props.modelo);
@@ -25,7 +26,10 @@ function Passo4(props) {
     props.addOpcional(op);
     return { type: ADD_OPCIONAL, op }
 }  
-
+function handleClick(index) {
+  let activeIndex = selecionado === index ? null : index;
+  setSelecionado(activeIndex);
+}
     if (props.currentStep !== 4) {
       return null
     } 
@@ -35,15 +39,17 @@ function Passo4(props) {
       <div>
       <ul>   
         {modelo.map(mod => 
-          <li key={mod.id}>{mod.id} - {mod.nome}
+          <li key={mod.id}><h2>{mod.id} - {mod.nome}</h2>
           <ul>
             {versao.map(ver => 
-            <li key={ver.id}> {ver.id} - {ver.nome} 
+            <li key={ver.id}><h3>{ver.id} - {ver.nome}</h3>
             <ul>
               {cor.map(cor => 
-                <li key={cor.id}> {cor.id} - {cor.nome}
+                <li key={cor.id}><h4>{cor.id} - {cor.nome}</h4>
                 <ul>
-                  {ver.opcionais.map(op => <li key={op.id}>{op.id} - {op.nome} Preço: {op.preco}<button onClick={() => addOpcional(op)}>Escolher</button></li>)}
+                  {ver.opcionais.map((op, index) => 
+                  <li key={op.id} className={`${selecionado === index && 'selecionado'}`}>
+                  {op.id} - {op.nome} Preço: {op.preco}<button onClick={() => {addOpcional(op); handleClick(index);}}>Escolher</button></li>)}
                 </ul>
                 </li>
                 )}
@@ -53,6 +59,34 @@ function Passo4(props) {
           </li>)}
       </ul>
       </div>
+      <style jsx>{`
+      ul {
+          text-align: center;
+          list-style:none;
+      }
+      .selecionado {
+        background-color: #067df7;
+      }
+      h1 { text-align: center; }
+      .row {
+        max-width: 220px;
+        margin: 40px auto 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .card {
+        padding: 18px 18px 24px;
+        width: 640px;
+        text-align: left;
+        text-decoration: none;
+        color: #434343;
+        border: 1px solid #9b9b9b;
+      }
+      .card:hover {
+        border-color: #067df7;
+      }
+    `}</style>      
       </>
     );
   }

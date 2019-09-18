@@ -6,6 +6,7 @@ import { ADD_MODELO } from '../actions/actionTypes';
 function Passo1(props) {
   const [carros, setCarros] = useState(props.carros);
   const [currentStep, setCurrentStep] = useState(props.currentStep);
+  const [selecionado, setSelecionado] = useState(null);
 
   useEffect(() => {
     setCarros(props.carros);
@@ -18,6 +19,12 @@ function addModelo(modelo) {
   return { type: ADD_MODELO, modelo }
 }  
 
+function handleClick(index) {
+  console.log('clickkkk '+index);
+  let activeIndex = selecionado === index ? null : index;
+  setSelecionado(activeIndex);
+}
+
     if (currentStep !== 1) {
       return null
     } 
@@ -26,18 +33,21 @@ function addModelo(modelo) {
         <h2>Escolha o modelo - Passo {currentStep}</h2>
         <div>  
         <ul>        
-          {carros.map(car => <div className='row'><a className='card'><li key={car.id}>
+          {carros.map((car, index) => <div className='row'><a className='card'>
+          <li key={car.id} className={`${selecionado === index && 'selecionado'}`}>
           <h2>{car.id} - {car.nome}</h2>
-          <button onClick={() => addModelo(car)}>Escolher</button>
+          <button onClick={() => {addModelo(car); handleClick(index);}}>Escolher</button>
           <img src={require(`../assets/images/${car.imagem}`)} alt="Carro" />	
-          </li></a></div>)}
-        
+          </li></a></div>)}        
         </ul>        
         </div>
         <style jsx>{`
       ul {
           text-align: center;
           list-style:none;
+      }
+      .selecionado {
+        background-color: #067df7;
       }
       h1 { text-align: center; }
       .row {
