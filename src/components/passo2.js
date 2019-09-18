@@ -10,19 +10,20 @@ function Passo2(props) {
   const [selecionado, setSelecionado] = useState(null);
 
   useEffect(() => {
-    console.log(props.modelo);
     setModelo(props.modelo);
     setVersao(props.versao);
     setCurrentStep(props.currentStep);    
   }, [props]);  
 
+  useEffect(() => {
+    setSelecionado(null);
+  }, [props.modelo]);    
+
   function addVersao(ver) {    
-    console.log('add versao '+ver.nome);  
     props.addVersao(ver);
     return { type: ADD_VERSAO, ver }
 }  
 function handleClick(index) {
-  console.log('clickkkk '+index);
   let activeIndex = selecionado === index ? null : index;
   setSelecionado(activeIndex);
 }

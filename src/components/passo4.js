@@ -21,6 +21,10 @@ function Passo4(props) {
     setCurrentStep(props.currentStep);    
   }, [props]);  
 
+  useEffect(() => {
+    setSelecionado(null);
+  }, [props.modelo]);   
+
   function addOpcional(op) {    
     console.log('add opcional '+op.nome);  
     props.addOpcional(op);

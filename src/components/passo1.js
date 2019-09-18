@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
-import { addModelo } from '../actions'; 
+import { addModelo } from '../actions';
 import { ADD_MODELO } from '../actions/actionTypes';
 
 function Passo1(props) {
@@ -14,17 +14,14 @@ function Passo1(props) {
   }, [props]);  
 
 function addModelo(modelo) {    
-  console.log('add modelo '+modelo.nome); 
   props.addModelo(modelo);
   return { type: ADD_MODELO, modelo }
 }  
 
 function handleClick(index) {
-  console.log('clickkkk '+index);
   let activeIndex = selecionado === index ? null : index;
   setSelecionado(activeIndex);
 }
-
     if (currentStep !== 1) {
       return null
     } 
@@ -73,12 +70,12 @@ function handleClick(index) {
     );
   }
   const mapStateToProps = store => ({
-    modelo: store.modelo
+    modelo: store.modelo,
   });
    
  const mapDispatchToProps= (dispatch)=>{
     return{
-        addModelo: (modelo)=>{dispatch(addModelo(modelo))}
+      addModelo: (modelo)=>{dispatch(addModelo(modelo))},
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Passo1);

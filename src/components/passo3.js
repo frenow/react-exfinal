@@ -18,6 +18,10 @@ function Passo3(props) {
     setCurrentStep(props.currentStep);    
   }, [props]);  
 
+  useEffect(() => {
+    setSelecionado(null);
+  }, [props.modelo]);   
+
   function addCor(cor) {    
     console.log('add cor '+cor.nome);  
     props.addCor(cor);
