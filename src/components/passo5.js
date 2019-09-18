@@ -40,17 +40,17 @@ function Passo5(props) {
       <div>
       <ul>   
         {modelo.map(mod => 
-          <li key={mod.id}><h2>{mod.id} - {mod.nome}</h2>
+          <li key={mod.id}><h2>Modelo: {mod.id} - {mod.nome}</h2>
           <img src={require(`../assets/images/${mod.imagem}`)} alt="Carro" />
           <ul>
             {versao.map(ver => 
-            <li key={ver.id}><h3>{ver.id} - {ver.nome}</h3>
+            <li key={ver.id}><h3>Versão: {ver.id} - {ver.nome}</h3>
             <ul>
               {cor.map(cor => 
-                <li key={cor.id}><h4>{cor.id} - {cor.nome}</h4>
+                <li key={cor.id}><h4>Cor: {cor.id} - {cor.nome}</h4>
                 <ul>
                   {opcional.map(op => 
-                    <li key={op.id}><h5>{op.id} - {op.nome}</h5>
+                    <li key={op.id}><h5>Opcional: {op.id} - {op.nome}</h5>
                     </li>)}
                 </ul>
                 </li>

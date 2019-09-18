@@ -13,25 +13,25 @@ export default function Carro(state = initialState, action) {
             console.log('passou no reducers modelo add');       
             return {
                 ...state, 
-                modelo: [...state.modelo, action.modelo] 
+                modelo: [action.modelo] 
             }            
             case ADD_VERSAO: 
             console.log('passou no reducers versao add');       
             return {
                 ...state, 
-                versao: [...state.versao, action.versao] 
+                versao: [action.versao] 
             }            
             case ADD_COR: 
             console.log('passou no reducers cor add');       
             return {
                 ...state, 
-                cor: [...state.cor, action.cor] 
+                cor: [action.cor] 
             }            
             case ADD_OPCIONAL: 
             console.log('passou no reducers opcional add');       
             return {
                 ...state, 
-                opcional: [...state.opcional, action.opcional] 
+                opcional: [action.opcional] 
             }            
             case REMOVE_CARRO: 
             console.log('passou no reducers remove');       
