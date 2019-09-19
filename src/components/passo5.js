@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
+import Totalizador from './totalizador';
 import { addModelo, addVersao, addCor, addOpcional } from '../actions';
 import { ADD_MODELO, ADD_VERSAO, ADD_COR, ADD_OPCIONAL } from '../actions/actionTypes';
 import { combineReducers } from "redux";
@@ -60,6 +61,7 @@ function Passo5(props) {
           </ul>
           </li></a></div>)} 
       </ul>
+      <h2><Totalizador /></h2>
       </div>
       <div className='centralizado'>
       <button onClick={() => buyClick()}>Comprar</button>
