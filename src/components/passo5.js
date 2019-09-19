@@ -49,9 +49,9 @@ function Passo5(props) {
               {cor.map(cor => 
                 <li key={cor.id}><h2>Cor: {cor.nome}</h2>
                 <ul>
-                  {opcional.map(op => 
-                    <li key={op.id}><h2>Opcional: {op.nome}</h2>
-                    </li>)}
+                  {opcional.map(op => <div className='row'><a className='card'>
+                    <li key={op.id}><h2>Opcional: {op.nome}</h2><button>Remover Opcional</button>
+                    </li></a></div>)} 
                 </ul>
                 </li>
                 )}
