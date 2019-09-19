@@ -40,14 +40,14 @@ function handleClick(index) {
       <div>
       <ul>   
         {modelo.map(mod => 
-          <li key={mod.id}><h2>{mod.id} - {mod.nome}</h2>
+          <li key={mod.id}><h2>{mod.nome}</h2>
           <ul>
             {versao.map(ver => 
-            <li key={ver.id}><h3>{ver.id} - {ver.nome}</h3>
+            <li key={ver.id}><h2>{ver.nome}</h2>
             <ul>
-              {ver.cores.map((cor, index) => 
+              {ver.cores.map((cor, index) => <div className='row'><a className='card'>
               <li key={cor.id} className={`${selecionado === index && 'selecionado'}`}>
-              {cor.id} - {cor.nome} Preço: {cor.preco} <button onClick={() => {addCor(cor); handleClick(index);}}>Escolher</button></li>)}
+              <h2>{cor.nome} Preço: {cor.preco}</h2><button onClick={() => {addCor(cor); handleClick(index);}}>Escolher</button></li></a></div>)} 
             </ul>
             </li>)}
           </ul>

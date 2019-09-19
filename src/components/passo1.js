@@ -32,7 +32,7 @@ function handleClick(index) {
         <ul>        
           {carros.map((car, index) => <div className='row'><a className='card'>
           <li key={car.id} className={`${selecionado === index && 'selecionado'}`}>
-          <h2>{car.id} - {car.nome}</h2>
+          <h2>{car.nome}</h2>
           <button onClick={() => {addModelo(car); handleClick(index);}}>Escolher</button>
           <img src={require(`../assets/images/${car.imagem}`)} alt="Carro" />	
           </li></a></div>)}        

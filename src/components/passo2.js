@@ -37,11 +37,11 @@ function handleClick(index) {
       <div>
       <ul>   
         {modelo.map(mod => 
-          <li key={mod.id}><h2>{mod.id} - {mod.nome}</h2>
+          <li key={mod.id}><h2>{mod.nome}</h2>
           <ul>
-            {mod.versoes.map((ver, index) => 
+            {mod.versoes.map((ver, index) => <div className='row'><a className='card'>
             <li key={ver.id} className={`${selecionado === index && 'selecionado'}`}> 
-            {ver.id} - {ver.nome} Preço: {ver.preco} <button onClick={() => {addVersao(ver); handleClick(index);}}>Escolher</button></li>)}
+            {ver.nome} Preço: {ver.preco} <button onClick={() => {addVersao(ver); handleClick(index);}}>Escolher</button></li></a></div>)} 
           </ul>
           </li>)}
       </ul>
