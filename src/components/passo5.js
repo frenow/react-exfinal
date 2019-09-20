@@ -37,7 +37,6 @@ function Passo5(props) {
     } 
     return(
       <>
-      <h2>Resumo - Passo {props.currentStep}</h2>
       <div>
       <ul>   
         {modelo.map(mod => <div className='row'><a className='card'>
@@ -61,9 +60,9 @@ function Passo5(props) {
           </ul>
           </li></a></div>)} 
       </ul>
-      <h2><Totalizador /></h2>
       </div>
       <div className='centralizado'>
+      <h2><Totalizador /></h2>
       <button onClick={() => buyClick()}>Comprar</button>
       <br></br>  
       </div>

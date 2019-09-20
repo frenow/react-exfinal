@@ -39,7 +39,6 @@ function handleClick(index) {
     } 
     return(
       <>
-      <h2>Escolha os Opcionais - Passo {props.currentStep}</h2>
       <div>
       <ul>   
         {modelo.map(mod => 

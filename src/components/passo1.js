@@ -27,7 +27,6 @@ function handleClick(index) {
     } 
     return(
         <>
-        <h2>Escolha o modelo - Passo {currentStep}</h2>
         <div>  
         <ul>        
           {carros.map((car, index) => <div className='row'><a className='card'>

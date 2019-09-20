@@ -33,7 +33,6 @@ function handleClick(index) {
     } 
     return(
       <>
-      <h2>Escolha a versão - Passo {props.currentStep}</h2>
       <div>
       <ul>   
         {modelo.map(mod => 

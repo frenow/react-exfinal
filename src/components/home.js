@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Carros } from "../api/carros";
+import MapaPassos from './mapaPassos';
 import Passo1 from "./passo1";
 import Passo2 from "./passo2";
 import Passo3 from "./passo3";
@@ -74,9 +75,8 @@ export default function Home(props) {
   }
       return (
         <>
-        <React.Fragment>
+        <MapaPassos currentStep={currentStep} ></MapaPassos>
         <h1>Monte seu VW</h1>
-        <p>Passo: {currentStep} </p> 
 
         <form onSubmit={handleSubmit}>
         {/* 
@@ -107,7 +107,6 @@ export default function Home(props) {
           {nextButton()}
   
         </form>
-        </React.Fragment>
         <style jsx>{`
         body {
             margin: 1em;
