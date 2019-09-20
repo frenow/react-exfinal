@@ -11,7 +11,6 @@ function Passo3(props) {
   const [selecionado, setSelecionado] = useState(null);
 
   useEffect(() => {
-    console.log(props.modelo);
     setModelo(props.modelo);
     setVersao(props.versao);
     setCor(props.cor);

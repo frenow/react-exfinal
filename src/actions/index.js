@@ -1,5 +1,5 @@
 import { ADD_CARRO, ADD_MODELO, ADD_VERSAO, ADD_COR, ADD_OPCIONAL } from '../actions/actionTypes';
-import { REMOVE_CARRO } from '../actions/actionTypes';
+import { REMOVE_OPCIONAL } from '../actions/actionTypes';
 
 export function addCarro(carro) { 
     return {    
@@ -31,9 +31,9 @@ export function addOpcional(opcional) {
         opcional   
     } 
 }
-export function removeCarro(carro) { 
+export function removeOpcional(opcional) { 
     return {    
-        type: REMOVE_CARRO,     
-        carro  
+        type: REMOVE_OPCIONAL,     
+        opcional
     } 
 }

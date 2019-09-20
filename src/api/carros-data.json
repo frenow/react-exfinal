@@ -8,7 +8,7 @@
           {
               "id": 1,
               "nome": "1.0 TSI",
-              "preco": 55.000,
+              "preco": 55000,
               "cores": [
                 {
                     "id": 1,
@@ -23,26 +23,26 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 },
                 {
                     "id": 4,
                     "nome": "Vermelho",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
               {
                   "id": 2,
                   "nome": "Central Multimidia",
-                  "preco": 2.000
+                  "preco": 2000
                 }            
             ]  
            },
           {
               "id": 2,
               "nome": "1.0 Move",
-              "preco": 50.000,
+              "preco": 50000,
               "cores": [
                 {
                     "id": 1,
@@ -57,19 +57,19 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
               {
                 "id": 1,
                 "nome": "Roda de Liga",
-                "preco": 5.000  
+                "preco": 5000  
               },
               {
                   "id": 2,
                   "nome": "Central Multimidia",
-                  "preco": 2.000
+                  "preco": 2000
                 }            
             ]  
                
@@ -84,7 +84,7 @@
           {
               "id": 1,
               "nome": "1.0 TSI",
-              "preco": 60.000,
+              "preco": 60000,
               "cores": [
                 {
                     "id": 1,
@@ -99,21 +99,21 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
               {
                   "id": 2,
                   "nome": "Central Multimidia",
-                  "preco": 2.000
+                  "preco": 2000
                 }            
             ]  
             },
           {
               "id": 3,
               "nome": "1.6 MSI",
-              "preco": 55.000,
+              "preco": 55000,
               "cores": [
                 {
                     "id": 1,
@@ -128,19 +128,19 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
               {
                 "id": 1,
                 "nome": "Roda de Liga",
-                "preco": 5.000  
+                "preco": 5000  
               },
               {
                   "id": 2,
                   "nome": "Central Multimidia",
-                  "preco": 2.000
+                  "preco": 2000
                 }            
             ]  
           }
@@ -154,7 +154,7 @@
           {
               "id": 1,
               "nome": "1.0 TSI",
-              "preco": 75.000,
+              "preco": 75000,
               "cores": [
                 {
                     "id": 1,
@@ -169,26 +169,26 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 },
                 {
                     "id": 4,
                     "nome": "Vermelho",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
                 {
                   "id": 3,
                   "nome": "Teto Solar",
-                  "preco": 5.000
+                  "preco": 5000
                 }            
             ]  
           },
           {
               "id": 3,
               "nome": "1.6 MSI",
-              "preco": 60.000,
+              "preco": 60000,
               "cores": [
                 {
                     "id": 1,
@@ -203,21 +203,21 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
                  {
                   "id": 3,
                   "nome": "Teto Solar",
-                  "preco": 5.000
+                  "preco": 5000
                 }            
             ]  
           },
           {
               "id": 4,
               "nome": "1.4 TSI",
-              "preco": 80.000,
+              "preco": 80000,
               "cores": [
                 {
                     "id": 1,
@@ -232,14 +232,14 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
                 {
                   "id": 3,
                   "nome": "Teto Solar",
-                  "preco": 5.000
+                  "preco": 5000
                 }
             ]  
                 
@@ -247,7 +247,7 @@
           {
               "id": 5,
               "nome": "GTI",
-              "preco": 155.000,
+              "preco": 155000,
               "cores": [
                 {
                     "id": 1,
@@ -262,24 +262,24 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 },
                 {
                     "id": 4,
                     "nome": "Vermelho",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
                 {
                   "id": 3,
                   "nome": "Teto Solar",
-                  "preco": 5.000
+                  "preco": 5000
                 },
                 {
                   "id": 4,
                   "nome": "Pacote Sport",
-                  "preco": 15.000
+                  "preco": 15000
                 }            
             ]  
                
@@ -294,7 +294,7 @@
           {
               "id": 6,
               "nome": "GLI",
-              "preco": 165.000,
+              "preco": 165000,
               "cores": [
                 {
                     "id": 1,
@@ -309,14 +309,14 @@
                 {
                     "id": 3,
                     "nome": "Prata",
-                    "preco": 2.000
+                    "preco": 2000
                 }
             ],
             "opcionais": [
                 {
                   "id": 5,
                   "nome": "Pacote R-line",
-                  "preco": 15.000
+                  "preco": 15000
                 }
             
             ]  
@@ -331,7 +331,7 @@
           {
               "id": 7,
               "nome": "HighLine",
-              "preco": 195.000,
+              "preco": 195000,
               "cores": [
                 {
                     "id": 1,
@@ -348,11 +348,11 @@
                 {
                   "id": 5,
                   "nome": "Pacote R-line",
-                  "preco": 15.000
+                  "preco": 15000
                 }
             
             ]  
-                    }	
+        }	
        ]       
        }	   
  ]

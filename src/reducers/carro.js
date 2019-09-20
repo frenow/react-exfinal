@@ -1,5 +1,5 @@
 import { ADD_MODELO, ADD_VERSAO, ADD_COR, ADD_OPCIONAL } from '../actions/actionTypes';
-import { REMOVE_CARRO } from '../actions/actionTypes';
+import { REMOVE_OPCIONAL } from '../actions/actionTypes';
 
 const initialState = {  
     modelo: [],
@@ -33,11 +33,11 @@ export default function Carro(state = initialState, action) {
                 ...state, 
                 opcional: [...state.opcional, action.opcional] 
             }            
-            case REMOVE_CARRO: 
-            console.log('passou no reducers remove');       
+            case REMOVE_OPCIONAL: 
+            console.log('passou no reducers remove opcional');       
             return {
                 ...state,
-                carro: state.carro.filter(car => car !== action.car)
+                opcional: state.opcional.filter(op => op !== action.op)
             }        
         default:            
             return state;

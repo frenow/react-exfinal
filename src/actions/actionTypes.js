@@ -3,4 +3,4 @@ export const ADD_MODELO = 'ADD_MODELO';
 export const ADD_VERSAO = 'ADD_VERSAO';
 export const ADD_COR = 'ADD_COR';
 export const ADD_OPCIONAL = 'ADD_OPCIONAL';
-export const REMOVE_CARRO = 'REMOVE_CARRO';
+export const REMOVE_OPCIONAL = 'REMOVE_OPCIONAL';

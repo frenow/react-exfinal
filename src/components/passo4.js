@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
 import { addModelo, addVersao, addCor, addOpcional } from '../actions';
 import { ADD_MODELO, ADD_VERSAO, ADD_COR, ADD_OPCIONAL } from '../actions/actionTypes';
-import { combineReducers } from "redux";
 
 function Passo4(props) {
   const [modelo, setModelo] = useState(props.modelo);
@@ -13,7 +12,6 @@ function Passo4(props) {
   const [selecionado, setSelecionado] = useState(null);
 
   useEffect(() => {
-    console.log(props.modelo);
     setModelo(props.modelo);
     setVersao(props.versao);
     setCor(props.cor);
