@@ -37,7 +37,7 @@ export default function Carro(state = initialState, action) {
             console.log('passou no reducers remove opcional');       
             return {
                 ...state,
-                opcional: state.opcional.filter(op => op !== action.op)
+                opcional: state.opcional.filter(op => op !== action.opcional)
             }        
         default:            
             return state;
