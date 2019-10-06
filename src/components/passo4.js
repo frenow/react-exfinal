@@ -71,11 +71,8 @@ function handleClick(index) {
       h1 { text-align: center; }
       .row {
         max-width: 220px;
-        margin: 40px auto 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
+        margin: 40px auto 20px;       
+      }      
       .card {
         padding: 18px 18px 24px;
         width: 640px;
