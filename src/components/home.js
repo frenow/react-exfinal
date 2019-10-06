@@ -48,9 +48,9 @@ export default function Home(props) {
     let current = currentStep;
     if(current !==1){
       return (
-        <div className='centralizado'>
+        <div className=''>
         <button 
-          type="button" onClick={_prev}>
+          type="button" onClick={_prev} className='btn ant'>
         Anterior
         </button>
         </div>
@@ -63,10 +63,10 @@ export default function Home(props) {
     let current = currentStep;
     if(current <5){
       return (
-        <div className='centralizado'>
-        <button 
+        <div className=''>
+        <button  className='btn prox'
           type="button" onClick={_next}>
-        Próximo
+        Próximo >
         </button>        
         </div>
       )
@@ -75,13 +75,23 @@ export default function Home(props) {
   }
       return (
         <>
+         
         <MapaPassos currentStep={currentStep} ></MapaPassos>
+        
         <h1>Monte seu VW</h1>
+        <div className='cont_cabecalho'>
+          <div className='cont_btn'>
+            {previousButton()}
+            {nextButton()}
+          </div>
+        </div>
+        
 
         <form onSubmit={handleSubmit}>
         {/* 
           render the form steps and pass required props in
         */}
+        <div className='controlePagina'>
           <Passo1 
             currentStep={currentStep} 
             handleChange={handleChange}
@@ -103,18 +113,8 @@ export default function Home(props) {
             currentStep={currentStep} 
             handleChange={handleChange}
           />
-          {previousButton()}
-          {nextButton()}
-  
-        </form>
-        <style jsx>{`
-        body {
-            margin: 1em;
-        }
-        .centralizado { 
-          text-align: center; 
-        }
-        `}</style>           
+          </div>         
+        </form>                 
         </>       
       );
   }
