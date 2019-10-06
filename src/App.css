@@ -125,3 +125,98 @@ ol.progress[data-steps="5"] li {
 .progress .active .step {
   border: 3px solid #93c3f2;
 }
+.row{
+  border: 2px solid #282c34;
+  margin: 40px auto 20px;
+  float:left;
+  margin-left:120px;
+  width: 500px;
+}
+.card {
+  /* padding: 18px 18px 24px;
+  width: 640px; */
+  text-align: left;
+  text-decoration: none;  
+}
+.card:hover {
+  border-color: #067df7;
+}
+.controlePagina{  
+  height:800px;
+}
+.contBtn{
+  border:solid 1px red;
+}
+.controlePagina{    
+  min-height: 1200px;  
+  
+}
+.btn {
+  background: #067df7;
+  border: solid 1px #315c88;
+  height: 45px;
+  float:left;
+  margin-left:10px;  
+  border-radius: 10px;
+}
+
+.btn .blue{  
+  height: 45px;
+  float:left;
+  margin-left:10px;  
+  border-radius: 10px;
+  background: #067df7;
+  border: solid 1px #315c88;
+}
+
+/* efeito quando ponteiro do mouse fica sobre o btn */
+.blue:hover{
+  background: #7bafe2;
+  border: solid 1px #315c88;  
+}
+/* botão proximo  */
+.btn .prox{
+  float: left;
+  margin-top:40px;  
+  margin-right: 100px;
+}
+/* botão anterior */
+.btn .ant {
+  float: left;
+  margin-left: 200px;
+}
+
+.btn .comprar{
+  background: #77cc46;
+}
+/* controla botões do cabecalho */
+.cont_btn{
+  background: blue;
+  text-align: center;
+  width: 180px;
+  margin: 0 auto;  
+}
+.cont_cabecalho{
+  widows: 100%;  
+  height: 50px;;
+  border-bottom: 2px solid #282c34;
+}
+
+/* pagina de finalização de pedido */
+.finaliza_pedido{
+  
+}
+.btn.remover {
+  text-decoration: none;
+  background: #f94545;
+  font-size: colo;
+  color: white;
+}
+.btn.comprar {
+  background: #4ee84e;
+  border: solid 1px #3da055;
+}
+
+.selecionado {
+  background-color: #067df7;
+}
