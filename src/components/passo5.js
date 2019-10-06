@@ -41,33 +41,35 @@ function Passo5(props) {
     } 
     return(
       <>
-      <div>
-      <ul>   
-        {modelo.map(mod => <div className='row'><a className='card'>
-          <li key={mod.id}><h2>Modelo: {mod.nome}</h2>
-          <img src={require(`../assets/images/${mod.imagem}`)} alt="Carro" />
-          <ul>
+      <div className='finaliza_pedido'>
+       
+        {modelo.map(mod => <div className=''>
+          
+          <a className='card'>
+          <div key={mod.id}>
+            <h2>Modelo: {mod.nome}</h2>
+            <img src={require(`../assets/images/${mod.imagem}`)} alt="Carro" />          
             {versao.map(ver => 
-            <li key={ver.id}><h2>Versão: {ver.nome}</h2>
-            <ul>
+            <div key={ver.id}><h2>Versão: {ver.nome}</h2>
+            
               {cor.map(cor => 
-                <li key={cor.id}><h2>Cor: {cor.nome}</h2>
-                <ul>
-                  {opcional.map(op => <div className='row'><a className='card'>
-                    <li key={op.id}><h2>Opcional: {op.nome}</h2><button onClick={() => removeOpcional(op)}>Remover Opcional</button>
-                    </li></a></div>)} 
-                </ul>
-                </li>
-                )}
-            </ul>
-            </li>)}
-          </ul>
-          </li></a></div>)} 
-      </ul>
+                <div key={cor.id}><h2>Cor: {cor.nome}</h2>            
+                  {opcional.map(op => <div className=''>
+                    <a className='card'>
+                      <div key={op.id}>
+                        <h2>Opcional: {op.nome}</h2><button className='btn remover' onClick={() => removeOpcional(op)}>Remover Opcional</button>
+                      </div>
+                    </a>
+                </div>)}                 
+                </div>
+                )}            
+            </div>)}          
+          </div></a></div>)} 
+      
       </div>
       <div className='centralizado'>
       <h2><Totalizador /></h2>
-      <button onClick={() => buyClick()}>Comprar</button>
+      <button onClick={() => buyClick()} className='btn comprar'>Comprar</button>
       <br></br>  
       </div>
       <style jsx>{`
