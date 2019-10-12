@@ -32,48 +32,10 @@ function handleClick(index) {
           {carros.map((car, index) => <div className='row'><a className='card'>
           <div key={car.id} className={`${selecionado === index && 'selecionado'}`}>
           <h2>{car.nome}</h2>
-          <button onClick={() => {addModelo(car); handleClick(index);}}>Escolher</button>
-          <img src={require(`../assets/images/${car.imagem}`)} alt="Carro" />	
+          <img src={require(`../assets/images/${car.imagem}`)} alt="Carro"  className="imgCarro"/>	
+          <button onClick={() => {addModelo(car); handleClick(index);}} className="btn btnCarro">Escolher</button>          
           </div></a></div>)}        
           </div>
-        
-
-        
-        {/* <style jsx>{`
-      ul {
-          text-align: center;
-          list-style:none;
-      }
-      .selecionado {
-        background-color: #067df7;
-      }
-      h1 { text-align: center; }
-      .row {
-        max-width: 220px;
-        margin: 40px auto 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        float:right;
-        margin-left:120px;
-        
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 640px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;        
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .controlePagina{
-        background:red;
-        height:100px;
-      }
-    `}</style> */}
       </div>
     );
   }

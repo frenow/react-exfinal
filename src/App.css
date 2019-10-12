@@ -1,3 +1,7 @@
+
+body{
+  text-align: center;
+}
 .App {
   text-align: center;
   font-family: Lato,sans-serif;
@@ -126,11 +130,16 @@ ol.progress[data-steps="5"] li {
   border: 3px solid #93c3f2;
 }
 .row{
-  border: 2px solid #282c34;
+  border: 2px solid #ccc;
   margin: 40px auto 20px;
   float:left;
   margin-left:120px;
-  width: 500px;
+  width: 440px;
+  padding: 20px;
+  border-radius: 10px;
+  height: 300px;
+  
+  
 }
 .card {
   /* padding: 18px 18px 24px;
@@ -143,6 +152,7 @@ ol.progress[data-steps="5"] li {
 }
 .controlePagina{  
   height:800px;
+  padding: 20px;
 }
 .contBtn{
   border:solid 1px red;
@@ -186,9 +196,7 @@ ol.progress[data-steps="5"] li {
   margin-left: 200px;
 }
 
-.btn .comprar{
-  background: #77cc46;
-}
+
 /* controla botões do cabecalho */
 .cont_btn{
   background: blue;
@@ -210,13 +218,77 @@ ol.progress[data-steps="5"] li {
   text-decoration: none;
   background: #f94545;
   font-size: colo;
-  color: white;
-}
-.btn.comprar {
-  background: #4ee84e;
-  border: solid 1px #3da055;
+  color: #fff;
+  font-weight: 300;
 }
 
+.btnItem{
+  background: #0eec45;
+  border: solid 1px #39f368;
+  color: #fff;      
+  height: 45px;    
+  border-radius: 4px;
+}
+
+.btnCarro{
+  background: #0eec45;
+  border: solid 1px #39f368;
+  color: #fff;
+  position: absolute;
+  margin-top: 190px;
+  margin-left: -150px;
+}
+.comprar {
+  background: #0eec45;
+  border: solid 1px #39f368;
+  margin-left: 50%;
+  height: 50px;
+  color: #fff;
+  padding: 5px 8px;
+  width: 100px;
+}
+ul {
+  text-align: center;
+  list-style:none;
+}
+     
+     
+
+
+.comprar:hover {
+  background: #188b35;
+  border: solid 1px #188b35;    
+}
 .selecionado {
   background-color: #067df7;
+  min-height: 100px;
+}
+
+.listarecursos {
+  float: right;
+  height: auto;
+  padding: 10px;
+  margin-top: -50px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.selectItem {
+  border-radius: 10px;
+  border: solid 1px #ccc;
+  min-height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.finalizaCompra{
+  text-align: center;  
+  margin-top:100px;
+  border-top:2px solid #ccc;
+}
+.imgCarro{
+  margin: 0 auto;
+  width: 250px;
+  margin-left: 90px;
 }

@@ -41,24 +41,21 @@ function Passo5(props) {
     } 
     return(
       <>
-      <div className='finaliza_pedido'>
-       
-        {modelo.map(mod => <div className=''>
-          
-          <a className='card'>
+      <div className='finaliza_pedido'>       
+        {modelo.map(mod => <div className=''>          
+          <a className=''>
           <div key={mod.id}>
             <h2>Modelo: {mod.nome}</h2>
-            <img src={require(`../assets/images/${mod.imagem}`)} alt="Carro" />          
-            {versao.map(ver => 
-            <div key={ver.id}><h2>Versão: {ver.nome}</h2>
+            <img src={require(`../assets/images/${mod.imagem}`)} alt="Carro" className='compra_carro' />          
+            {
+              versao.map(ver => 
+              <div className='listarecursos' key={ver.id}><h2>Versão: {ver.nome}</h2>
             
               {cor.map(cor => 
                 <div key={cor.id}><h2>Cor: {cor.nome}</h2>            
                   {opcional.map(op => <div className=''>
-                    <a className='card'>
-                      <div key={op.id}>
-                        <h2>Opcional: {op.nome}</h2><button className='btn remover' onClick={() => removeOpcional(op)}>Remover Opcional</button>
-                      </div>
+                    <a className='card'>                      
+                        <h2>Opcional: {op.nome}</h2><button className='btn remover' onClick={() => removeOpcional(op)}>Remover Opcional</button>                      
                     </a>
                 </div>)}                 
                 </div>
@@ -67,41 +64,11 @@ function Passo5(props) {
           </div></a></div>)} 
       
       </div>
-      <div className='centralizado'>
+      <div className='finalizaCompra'>
       <h2><Totalizador /></h2>
       <button onClick={() => buyClick()} className='btn comprar'>Comprar</button>
       <br></br>  
-      </div>
-      <style jsx>{`
-      ul {
-          text-align: center;
-          list-style:none;
-      }
-      .selecionado {
-        background-color: #067df7;
-      }
-      h1 { text-align: center; }
-      .row {
-        max-width: 220px;
-        margin: 40px auto 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 640px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;        
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .centralizado { 
-        text-align: center; 
-      }      
-    `}</style>
+      </div>    
       </>
     );
   }
