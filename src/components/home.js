@@ -53,9 +53,9 @@ export default function Home(props) {
     let current = currentStep;
     if(current !==1){
       return (
-        <div className='centralizado'>
+        <div className=''>
         <button 
-          type="button" onClick={_prev}>
+          type="button" onClick={_prev} className='btn ant'>
         Anterior
         </button>
         </div>
@@ -68,10 +68,10 @@ export default function Home(props) {
     let current = currentStep;
     if(current <5){
       return (
-        <div className='centralizado'>
-        <button 
+        <div className=''>
+        <button  className='btn prox'
           type="button" onClick={_next}>
-        Próximo
+        Próximo >
         </button>        
         </div>
       )
@@ -80,11 +80,19 @@ export default function Home(props) {
   }
       return (
         <>
+         
         <MapaPassos currentStep={currentStep} ></MapaPassos>
         <div className="navbar">
           <DarkModeToggle />
         </div>
         <h1>Monte seu VW</h1>
+        <div className='cont_cabecalho'>
+          <div className='cont_btn'>
+            {previousButton()}
+            {nextButton()}
+          </div>
+        </div>
+        
 
         <form onSubmit={handleSubmit}>
         {/* 

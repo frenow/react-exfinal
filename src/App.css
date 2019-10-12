@@ -1,3 +1,7 @@
+
+body{
+  text-align: center;
+}
 .App {
   text-align: center;
   font-family: Lato,sans-serif;
@@ -125,4 +129,167 @@ ol.progress[data-steps="5"] li {
 .progress .done .step,
 .progress .active .step {
   border: 3px solid #93c3f2;
+}
+.row{
+  border: 2px solid #ccc;
+  margin: 40px auto 20px;
+  float:left;
+  margin-left:120px;
+  width: 440px;
+  padding: 20px;
+  border-radius: 10px;
+  height: 300px;
+  
+  
+}
+.card {
+  /* padding: 18px 18px 24px;
+  width: 640px; */
+  text-align: left;
+  text-decoration: none;  
+}
+.card:hover {
+  border-color: #067df7;
+}
+.controlePagina{  
+  height:800px;
+  padding: 20px;
+}
+.contBtn{
+  border:solid 1px red;
+}
+.controlePagina{    
+  min-height: 1200px;  
+  
+}
+.btn {
+  background: #067df7;
+  border: solid 1px #315c88;
+  height: 45px;
+  float:left;
+  margin-left:10px;  
+  border-radius: 10px;
+}
+
+.btn .blue{  
+  height: 45px;
+  float:left;
+  margin-left:10px;  
+  border-radius: 10px;
+  background: #067df7;
+  border: solid 1px #315c88;
+}
+
+/* efeito quando ponteiro do mouse fica sobre o btn */
+.blue:hover{
+  background: #7bafe2;
+  border: solid 1px #315c88;  
+}
+/* botão proximo  */
+.btn .prox{
+  float: left;
+  margin-top:40px;  
+  margin-right: 100px;
+}
+/* botão anterior */
+.btn .ant {
+  float: left;
+  margin-left: 200px;
+}
+
+
+/* controla botões do cabecalho */
+.cont_btn{
+  background: blue;
+  text-align: center;
+  width: 180px;
+  margin: 0 auto;  
+}
+.cont_cabecalho{
+  widows: 100%;  
+  height: 50px;;
+  border-bottom: 2px solid #282c34;
+}
+
+/* pagina de finalização de pedido */
+.finaliza_pedido{
+  
+}
+.btn.remover {
+  text-decoration: none;
+  background: #f94545;
+  font-size: colo;
+  color: #fff;
+  font-weight: 300;
+}
+
+.btnItem{
+  background: #0eec45;
+  border: solid 1px #39f368;
+  color: #fff;      
+  height: 45px;    
+  border-radius: 4px;
+}
+
+.btnCarro{
+  background: #0eec45;
+  border: solid 1px #39f368;
+  color: #fff;
+  position: absolute;
+  margin-top: 190px;
+  margin-left: -150px;
+}
+.comprar {
+  background: #0eec45;
+  border: solid 1px #39f368;
+  margin-left: 50%;
+  height: 50px;
+  color: #fff;
+  padding: 5px 8px;
+  width: 100px;
+}
+ul {
+  text-align: center;
+  list-style:none;
+}
+     
+     
+
+
+.comprar:hover {
+  background: #188b35;
+  border: solid 1px #188b35;    
+}
+.selecionado {
+  background-color: #067df7;
+  min-height: 100px;
+}
+
+.listarecursos {
+  float: right;
+  height: auto;
+  padding: 10px;
+  margin-top: -50px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.selectItem {
+  border-radius: 10px;
+  border: solid 1px #ccc;
+  min-height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.finalizaCompra{
+  text-align: center;  
+  margin-top:100px;
+  border-top:2px solid #ccc;
+}
+.imgCarro{
+  margin: 0 auto;
+  width: 250px;
+  margin-left: 90px;
 }

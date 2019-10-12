@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from 'react-redux';
 import { addModelo } from '../actions';
 import { ADD_MODELO } from '../actions/actionTypes';
+import '../index.css'
 
 function Passo1(props) {
   const [carros, setCarros] = useState(props.carros);
@@ -26,46 +27,16 @@ function handleClick(index) {
       return null
     } 
     return(
-        <>
+        <div className='controlePagina'>
         <div>  
-        <ul>        
           {carros.map((car, index) => <div className='row'><a className='card'>
-          <li key={car.id} className={`${selecionado === index && 'selecionado'}`}>
+          <div key={car.id} className={`${selecionado === index && 'selecionado'}`}>
           <h2>{car.nome}</h2>
-          <button onClick={() => {addModelo(car); handleClick(index);}}>Escolher</button>
-          <img src={require(`../assets/images/${car.imagem}`)} alt="Carro" />	
-          </li></a></div>)}        
-        </ul>        
-        </div>
-        <style jsx>{`
-      ul {
-          text-align: center;
-          list-style:none;
-      }
-      .selecionado {
-        background-color: #067df7;
-      }
-      h1 { text-align: center; }
-      .row {
-        max-width: 220px;
-        margin: 40px auto 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 640px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-    `}</style>
-      </>
+          <img src={require(`../assets/images/${car.imagem}`)} alt="Carro"  className="imgCarro"/>	
+          <button onClick={() => {addModelo(car); handleClick(index);}} className="btn btnCarro">Escolher</button>          
+          </div></a></div>)}        
+          </div>
+      </div>
     );
   }
   const mapStateToProps = store => ({
