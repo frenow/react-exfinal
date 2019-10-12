@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Carros } from "../api/carros";
 import MapaPassos from './mapaPassos';
-import Passo1 from "./passo1";
-import Passo2 from "./passo2";
-import Passo3 from "./passo3";
-import Passo4 from "./passo4";
-import Passo5 from "./passo5";
+//import Passo1 from "./passo1";
+import { Passo1error } from '../components/passo1error';
+
+const Passo1 = React.lazy(() => import('./passo1'));
+const Passo2 = React.lazy(() => import('./passo2'));
+const Passo3 = React.lazy(() => import('./passo3'));
+const Passo4 = React.lazy(() => import('./passo4'));
+const Passo5 = React.lazy(() => import('./passo5'));
 
 export default function Home(props) {
  
@@ -82,6 +85,8 @@ export default function Home(props) {
         {/* 
           render the form steps and pass required props in
         */}
+        <Passo1error>
+        <Suspense fallback={<h1>Loading...</h1>}>
           <Passo1 
             currentStep={currentStep} 
             handleChange={handleChange}
@@ -103,6 +108,8 @@ export default function Home(props) {
             currentStep={currentStep} 
             handleChange={handleChange}
           />
+        </Suspense>
+        </Passo1error>
           {previousButton()}
           {nextButton()}
   
