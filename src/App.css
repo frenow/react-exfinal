@@ -53,7 +53,7 @@ ol.progress[data-steps="5"] li {
   list-style: none;
   list-style-image: none;
   margin: 20px 0 20px 0;
-  padding: 0;
+  padding: 20px;
 }
 .progress li {
   float: left;
@@ -65,8 +65,9 @@ ol.progress[data-steps="5"] li {
   vertical-align: bottom;
   text-align: center;
   margin-bottom: 1em;
-  color: black;
+  color: #93c3f2;
   opacity: 0.3;
+  font-weight: bold;
 }
 .progress .step {
   color: black;

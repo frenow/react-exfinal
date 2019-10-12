@@ -1,8 +1,10 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Carros } from "../api/carros";
 import MapaPassos from './mapaPassos';
-//import Passo1 from "./passo1";
+
 import { Passo1error } from '../components/passo1error';
+import DarkModeToggle from './DarkModeToggle';
+import '../style.scss';
 
 const Passo1 = React.lazy(() => import('./passo1'));
 const Passo2 = React.lazy(() => import('./passo2'));
@@ -79,6 +81,9 @@ export default function Home(props) {
       return (
         <>
         <MapaPassos currentStep={currentStep} ></MapaPassos>
+        <div className="navbar">
+          <DarkModeToggle />
+        </div>
         <h1>Monte seu VW</h1>
 
         <form onSubmit={handleSubmit}>
