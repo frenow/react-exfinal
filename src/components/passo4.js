@@ -78,8 +78,7 @@ function handleClick(index) {
         width: 640px;
         text-align: left;
         text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
+        color: #434343;        
       }
       .card:hover {
         border-color: #067df7;
