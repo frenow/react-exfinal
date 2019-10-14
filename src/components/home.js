@@ -122,10 +122,7 @@ export default function Home(props) {
             handleChange={handleChange}
           />
         </Suspense>
-        </Passo1error>
-          {previousButton()}
-          {nextButton()}
-  
+        </Passo1error>           
         </form>
         <style jsx>{`
         body {
